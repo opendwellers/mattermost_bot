@@ -192,7 +192,7 @@ class Message(object):
         return self._body['data'].get('mentions')
 
     def _gen_at_message(self, text):
-        return '@{}: {}'.format(self.get_username(), text)
+        return '{}: {}'.format(self.get_username(), text)
 
     def _gen_reply(self, text):
         if self._body['message_type'] == '?':
